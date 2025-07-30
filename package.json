@@ -1,0 +1,26 @@
+{
+  "name": "food-ordering-app",
+  "version": "1.0.0",
+  "description": "food ordering app",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "parcel index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kshitizx7/food-ordering-app.git"
+  },
+  "author": "kshitiz sharma",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kshitizx7/food-ordering-app/issues"
+  },
+  "homepage": "https://github.com/kshitizx7/food-ordering-app#readme",
+  "dependencies": {
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0"
+  },
+  "devDependencies": {
+    "parcel": "^2.15.4"
+  }
+}
