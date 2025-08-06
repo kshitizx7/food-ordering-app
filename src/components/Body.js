@@ -9,8 +9,9 @@ const Body = () => {
             <button 
             className="filter-btn"
             onClick={() => { 
+                // here we are filtering the listofRestaurents to only those with avgRating > 4;
                 const filteredList = listofRestaurents.filter( (res) => { return res.info.avgRating > 4 });
-
+                // this fxn setListofRestaurents take the updated data and re-render the screen 
                 setlistofRestaurents(filteredList);
             }}
             >
