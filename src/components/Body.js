@@ -1,9 +1,37 @@
-import resList from "../utils/mockData";
 import Restro_card from "./Restro_card";
-import {useState} from "react";
+import {useState,useEffect} from "react";
 
 const Body = () => {
-    const[listofRestaurents,setlistofRestaurents] = useState(resList);
+    const[listofRestaurents,setlistofRestaurents] = useState([]);
+
+
+    useEffect(() => {
+        fetchData();
+    } , [])
+
+
+    const fetchData = async () => {
+    const data = await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=17.406498&lng=78.47724389999999&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING");
+    const json = await data.json();
+    console.log(json); // Inspect this to understand structure if needed
+
+    const cards = json?.data?.cards || [];
+
+    // Safely find the card that has the restaurant list
+    const restaurantCard = cards.find(
+        (card) => card?.card?.card?.gridElements?.infoWithStyle?.restaurants
+    );
+
+    const restaurants = restaurantCard?.card?.card?.gridElements?.infoWithStyle?.restaurants;
+
+    if (restaurants) {
+        setlistofRestaurents(restaurants);
+    } else {
+        console.warn("⚠️ Could not find restaurants in API response.");
+    }
+};
+
+
     return (
         <div className="Body">
             <button 
