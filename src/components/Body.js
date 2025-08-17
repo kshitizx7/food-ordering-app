@@ -1,6 +1,8 @@
 import Restro_card from "./Restro_card";
 import {useState,useEffect} from "react";
 import Shimmer from "./shimmer";
+import { Link } from "react-router";
+
 
 const Body = () => {
     const[listofRestaurents,setlistofRestaurents] = useState([]);
@@ -13,7 +15,7 @@ const Body = () => {
 
 
     const fetchData = async () => {
-        const data = await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=19.0595596&lng=72.8295287&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING");
+        const data = await fetch("https://corsproxy.io/https://www.swiggy.com/dapi/restaurants/list/v5?lat=26.8466937&lng=80.94616599999999&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING");
         const json = await data.json();
         console.log(json); // Inspect this to understand structure if needed
 
@@ -52,9 +54,11 @@ const Body = () => {
                             const filtered = listofRestaurents.filter((res) => {
                                 const name = res.info.name.toLowerCase();
                                 const cuisine = res.info.cuisines.join(" ").toLowerCase();
+                                const loc = res.info.areaName.toLowerCase();
                                 return (
                                     name.includes(searchText.toLowerCase()) ||
-                                    cuisine.includes(searchText.toLowerCase())
+                                    cuisine.includes(searchText.toLowerCase()) ||
+                                    loc.includes(searchText.toLowerCase())
                                 )
                             })
                             setFilteredRestaurants(filtered);
@@ -78,7 +82,13 @@ const Body = () => {
             
             <div className="restro-container">
                 {
-                    filteredRestaurants.map(  (restaurant) => <Restro_card key={restaurant.info.id} resData = {restaurant}/>)
+                    filteredRestaurants.map(  (restaurant) => {
+                        return (
+                            <Link to = {`/restroMenu/${restaurant.info.id}`}  key={restaurant.info.id} style={{ textDecoration: "none", color: "inherit" }} >
+                                <Restro_card resData = {restaurant}/>
+                            </Link>
+                        )
+                    } )
                 }
             </div>
         </div>
