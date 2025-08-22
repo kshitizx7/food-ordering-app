@@ -1,16 +1,32 @@
 import UserInfo from "./userInfo";
-import UserClass from "./userClass";
+
+
+// class About extends React.Component {
+//     constructor (props) {
+//         super(props);
+//     }
+
+//     componentDidMount() {
+//     }
+
+//     render () {
+        
+//         return (
+//             <div>
+//                 <UserInfo  profile = {"Developer"}  location = {"GR. NOIDA"} user_name = {"kshitizx7"} />
+//                 {/* <UserClass  profile = {"React engineer"}  location = {"GR. NOIDA"} user_name = {"akshaymarch7"} />
+//                 <UserClass  profile = {"JavaScript engineer"}  location = {"GR. NOIDA"} user_name = {"hiteshchoudhary"} /> */}
+//             </div>
+//         )
+//     }
+// }
 
 const About = () => {
     return (
         <div>
-            <h1> About us..</h1>
-            <h2>this is a react page</h2>
-            <UserInfo name = {"KSHITIZ SHARMA"} profile = {"Developer"} contact = {"@kshitiz_sharma_17"} />
-            <UserInfo name = {"MAYANK RAI"} profile = {"Data engineer"} contact = {"@mayank_rai_10"} />
-            <UserInfo name = {"KUSHAAL GUPTA"} profile = {"Logistics and Operations Head"} contact = {"@kushaal_gupta_08"} />
-            <UserClass location = {"GR. NOIDA"} />
-
+            <UserInfo location = {"india"} profile = {"Developer"} user_name = {"kshitizx7"} />
+            <UserInfo location = {"india"} profile = {"Data engineer"} user_name = {"akshaymarch7"} />
+            <UserInfo location = {"india"} profile = {"Logistics and Operations Head"} user_name = {"hiteshchoudhary"} />
         </div>
     )
 }

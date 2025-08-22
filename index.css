@@ -239,6 +239,36 @@ li {
 }
 
 
+
+
+
 .userContainer {
-  border: black solid 1px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 16px;
+  margin: 12px 0;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.userImage {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;   /* 👈 circle */
+  object-fit: cover;
+  border: 3px solid #4a90e2;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+}
+
+.userInfo h2 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.userInfo p {
+  margin: 4px 0;
+  color: #555;
 }
