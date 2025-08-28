@@ -3,18 +3,24 @@ import {useState,useEffect} from "react";
 import Shimmer from "./shimmer";
 import { Link } from "react-router";
 import useRestaurentInfo from "../customHooks/useRestaurentInfo";
-
+import useOnlineStatus from "../customHooks/useOnlineStatus.js";
+import OfflinePage from "./OfflinePage.js";
 
 const Body = () => {
     const data = useRestaurentInfo();
     const[listofRestaurents,setlistofRestaurents] = useState([]);
     const[searchText,setSearchText] = useState("");
     const[filteredRestaurants,setFilteredRestaurants] = useState([]);
+    const status = useOnlineStatus();
 
     useEffect(()=>{
         setlistofRestaurents(data);
         setFilteredRestaurants(data);
     },[data])
+
+    if(status === false) return (
+        <OfflinePage />
+    )
 
             // SHIMMER
     return  listofRestaurents.length === 0 ? ( <Shimmer/> ) : (

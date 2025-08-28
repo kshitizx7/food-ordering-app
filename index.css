@@ -1,3 +1,6 @@
+@import "tailwindcss";
+
+
 /* Reset and base styles */
 html, body {
     margin: 0;
@@ -271,4 +274,36 @@ li {
 .userInfo p {
   margin: 4px 0;
   color: #555;
+}
+
+
+/* offline page css */
+
+/* OfflinePage.css */
+
+.offlinePage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;          /* Take full screen height */
+  background-color: #f8f9fa;  /* Light gray background */
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+.offlineImage img {
+  width: 200px;           /* Adjust image size */
+  max-width: 80%;
+  margin-bottom: 20px;
+}
+
+.offlineMsg {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+  background: #ffe0e0;    /* Light red background for warning feel */
+  padding: 10px 20px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
 }
