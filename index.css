@@ -11,60 +11,7 @@ html, body {
 }
 
 /* Header */
-.header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 40px;
-    height: 100px;
-    color: Black;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
 
-.logo-container {
-    height: 80px;
-    width: 80px;
-}
-.logo {
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-    border-radius: 50%;
-}
-
-ul {
-    display: flex;
-    align-items: center;
-    gap: 30px;
-    padding: 0;
-    margin: 0;
-}
-li {
-    list-style: none;
-    font-size: 16px;
-    cursor: pointer;
-}
-
-/* Navigation Links (Link / NavLink) */
-.header-components ul li a {
-    text-decoration: none;
-    color: black;
-    font-size: 16px;
-    font-weight: 500;
-    transition: color 0.3s ease, border-bottom 0.3s ease;
-    padding: 6px 0;
-}
-
-.header-components ul li a:hover {
-    color: #ff6b6b; /* coral red */
-    border-bottom: 2px solid #ff6b6b;
-}
-
-.header-components ul li a.active {
-    color: #007bff; /* blue active */
-    border-bottom: 2px solid #007bff;
-    font-weight: 600;
-}
 
 /* Body */
 .Body {

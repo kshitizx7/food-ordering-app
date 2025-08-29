@@ -1,44 +1,85 @@
 import { useState } from "react";
 import { LOGO_URL } from "../utils/constants";
-import { useState } from "react";
 import { Link } from "react-router";
 import useOnlineStatus from "../customHooks/useOnlineStatus";
 
 const Header = () => {
-    const [loginButton,setloginButton] = useState("Login");
-    const status = useOnlineStatus();
-    return (
-        <div className="header">
-            <div className="logo-container">
-                <Link to = "/" >
-                    <img 
-                    className="logo"
-                    src={LOGO_URL}
-                    alt="logo-image" 
-                    />
-                </Link>
-            </div>
-            <div className="header-components" >
-                <ul>
-                    
-                    <li className="onlineStatus"> {status ? "🟢" : "🔴"} </li>
-                    <li><Link to=  "/Grocery"> Grocery </Link> </li>
-                    <li><Link to = "/"> Home </Link></li>
-                    <li><Link to = "/About"> About </Link></li>
-                    <li><Link to = "/Contact"> Contact </Link></li>
-                </ul>
-                <button className="login-btn" onClick={
-                    () => {
-                        loginButton === "Login"
-                        ? setloginButton("Logout")
-                        : setloginButton("Login")
-                    }
-                }>
-                    {loginButton}
-                </button>
-            </div>
-        </div>
-    )
-}
+  const [loginButton, setLoginButton] = useState("Login");
+  const status = useOnlineStatus();
+
+  return (
+    <header className="flex items-center justify-between px-8 py-4 bg-gray-900 shadow-lg sticky top-0 z-50">
+      {/* Logo */}
+      <div className="flex items-center gap-2">
+        <Link to="/">
+          <img
+            className="w-14 h-14 rounded-full border-2 border-white shadow-md hover:scale-105 transition-transform duration-300"
+            src={LOGO_URL}
+            alt="logo"
+          />
+        </Link>
+        <span className="text-white text-2xl font-bold tracking-wide">
+          MealMate
+        </span>
+      </div>
+
+      {/* Nav Links */}
+      <nav>
+        <ul className="flex items-center gap-6 text-white font-medium text-lg">
+          <li className="flex items-center">
+            <span className="mr-2">{status ? "🟢" : "🔴"}</span>
+            <span className="text-sm text-gray-300">
+              {status ? "Online" : "Offline"}
+            </span>
+          </li>
+          <li>
+            <Link
+              to="/Grocery"
+              className="hover:text-yellow-400 transition-colors duration-300"
+            >
+              Grocery
+            </Link>
+          </li>
+          <li>
+            <Link
+              to="/"
+              className="hover:text-yellow-400 transition-colors duration-300"
+            >
+              Home
+            </Link>
+          </li>
+          <li>
+            <Link
+              to="/About"
+              className="hover:text-yellow-400 transition-colors duration-300"
+            >
+              About
+            </Link>
+          </li>
+          <li>
+            <Link
+              to="/Contact"
+              className="hover:text-yellow-400 transition-colors duration-300"
+            >
+              Contact
+            </Link>
+          </li>
+        </ul>
+      </nav>
+
+      {/* Login Button */}
+      <button
+        onClick={() =>
+          loginButton === "Login"
+            ? setLoginButton("Logout")
+            : setLoginButton("Login")
+        }
+        className="px-5 py-2 rounded-xl bg-yellow-400 text-gray-900 font-semibold shadow-md hover:bg-yellow-300 hover:shadow-lg transition-all duration-300"
+      >
+        {loginButton}
+      </button>
+    </header>
+  );
+};
 
 export default Header;
