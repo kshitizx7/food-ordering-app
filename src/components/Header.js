@@ -18,17 +18,19 @@ const Header = () => {
             alt="logo"
           />
         </Link>
-        <span className="text-white text-2xl font-bold tracking-wide">
-          MealMate
-        </span>
+        <Link to={"/"}>
+          <span className="text-white text-2xl font-bold tracking-wide">
+            MealMate
+          </span>
+        </Link>
       </div>
 
       {/* Nav Links */}
       <nav>
         <ul className="flex items-center gap-6 text-white font-medium text-lg">
-          <li className="flex items-center">
-            <span className="mr-2">{status ? "🟢" : "🔴"}</span>
-            <span className="text-sm text-gray-300">
+          <li className={`flex items-center  rounded-2xl px-2 ${status ? "bg-green-700" : "bg-red-600"} `} >
+            <span className="mr-1">{status ? "👍" : "👎"}</span>
+            <span className="text-sm text-white">
               {status ? "Online" : "Offline"}
             </span>
           </li>

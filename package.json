@@ -4,7 +4,9 @@
   "description": "food ordering app",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "parcel index.html"
+    "start": "parcel index.html",
+    "build": "parcel build index.html",
+    "deploy": "gh-pages -d dist"
   },
   "repository": {
     "type": "git",
@@ -26,6 +28,7 @@
     "tailwindcss": "^4.1.12"
   },
   "devDependencies": {
+    "gh-pages": "^6.3.0",
     "parcel": "^2.15.4"
   }
 }

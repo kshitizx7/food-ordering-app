@@ -23,7 +23,7 @@ const Body = () => {
   return listofRestaurents.length === 0 ? (
     <Shimmer />
   ) : (
-    <div className="px-6 py-6 bg-gray-50 min-h-screen">
+    <div className="px-6 py-6 bg-gray-500 min-h-screen">
       {/* Filters */}
       <div className="flex flex-col md:flex-row items-center justify-between gap-4 mb-8">
         {/* Search */}
