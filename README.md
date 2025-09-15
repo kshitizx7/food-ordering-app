@@ -26,6 +26,8 @@ Check out the deployed version of MealMate here: [Live Demo](https://your-live-d
 *(Replace these image links with your own app screenshots)*  
 <img width="1915" height="899" alt="MealMate Home" src="https://via.placeholder.com/1915x899" />  
 <img width="1915" height="899" alt="MealMate Cart" src="https://via.placeholder.com/1915x899" />
+<img width="1892" height="906" alt="image" src="https://github.com/user-attachments/assets/f4a02829-6ea3-4915-bd44-a77a6aea475e" />
+
 
 ---
 
