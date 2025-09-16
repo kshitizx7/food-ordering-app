@@ -5,12 +5,6 @@ It’s designed to be responsive, scalable, and user-friendly — built using Re
 
 ---
 
-## 🌐 Live Demo
-
-Check out the deployed version of MealMate here: [Live Demo](https://your-live-demo-link.com)
-
----
-
 ## 🚀 Features
 
 - **Browse Restaurants & Menus** – Dynamic restaurant and menu listings.
@@ -23,10 +17,9 @@ Check out the deployed version of MealMate here: [Live Demo](https://your-live-d
 ---
 
 ## 🖼️ Screenshots
-*(Replace these image links with your own app screenshots)*  
-<img width="1915" height="899" alt="MealMate Home" src="https://via.placeholder.com/1915x899" />  
-<img width="1915" height="899" alt="MealMate Cart" src="https://via.placeholder.com/1915x899" />
-<img width="1892" height="906" alt="image" src="https://github.com/user-attachments/assets/f4a02829-6ea3-4915-bd44-a77a6aea475e" />
+<img width="1881" height="922" alt="image" src="https://github.com/user-attachments/assets/bf279940-df5f-4c5b-a698-f6d96ea0ccfe" />
+<img width="1885" height="921" alt="image" src="https://github.com/user-attachments/assets/49b15453-c428-41e4-b5bf-02f78b16fb2d" />
+<img width="1880" height="921" alt="image" src="https://github.com/user-attachments/assets/7ed28dc1-3e0b-4988-92d9-2524c17a663e" />
 
 
 ---
@@ -44,17 +37,15 @@ Check out the deployed version of MealMate here: [Live Demo](https://your-live-d
 
 ## 📂 Project Structure
 
-<img width="1881" height="922" alt="image" src="https://github.com/user-attachments/assets/bf279940-df5f-4c5b-a698-f6d96ea0ccfe" />
-<img width="1885" height="921" alt="image" src="https://github.com/user-attachments/assets/49b15453-c428-41e4-b5bf-02f78b16fb2d" />
-<img width="1880" height="921" alt="image" src="https://github.com/user-attachments/assets/7ed28dc1-3e0b-4988-92d9-2524c17a663e" />
-
-
-
-*(Replace with an actual screenshot of your folder structure)*
+<img width="603" height="830" alt="image" src="https://github.com/user-attachments/assets/65a179a6-e1ab-4f51-a8f7-1182cd8f1416" />
 
 ---
 
 ## ⚙️ Getting Started
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/<your-username>/food-ordering-app.git
+   cd food-ordering-app
 
 1. **Clone the repository**
    ```bash
